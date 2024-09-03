@@ -30,7 +30,33 @@ let myObj = {
 }
 
 const myfunction = function(){
-    console.log("Heloo World");
+  //  console.log("Heloo World");
 };
 
-console.log(typeof heroes);
+ // console.log(typeof heroes);
+
+
+ // ++++++++++++++++++++++++++++++++++++++++++++++
+
+ // Stack(Primitive) => values are copy , Heap(Non-Primitive) => Values are reference
+
+ let youtubeName = "Shourya Soni"
+ let anotherName = youtubeName;
+ anotherName = "apna college"
+
+ console.log(youtubeName);
+ console.log(anotherName);
+
+ let userOne = {
+    email : "sonis8934@gmail.com",
+    upi : "user@ybl"
+ }
+
+ let userTwo = userOne;
+ userTwo.email = "uefhi@gmail.com"
+
+ console.log(userTwo); 
+ console.log(userOne);
+
+ 
+
