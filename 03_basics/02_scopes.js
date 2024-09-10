@@ -2,15 +2,15 @@
 
 let a = 100;
 
-// if(true){
-//     let a = 10;
-//     const b = 20;               // Block Scope
-//     console.log("inner : ", a)
-    // var c = 30;
+if(true){
+    let a = 10;
+    const b = 20;               // Block Scope
+    console.log("inner : ", a)
+    var c = 30;
 
-//}
+}
 
-//  console.log(a,b,c);
+  //console.log(a);
  //console.log(a);
 // console.log(b);
 // console.log(c);
@@ -42,12 +42,12 @@ if(true){
 // console.log(username);
 
 // ++++++++++++++++++++++++++++++  interesting  ++++++++++++++++++++++++++++ // 
-console.log(addone(6))
+// console.log(addone(6))
 function addone (num){
     return num + 1
 }
 
-addTwo(5)           // referenceerror: Cannot access 'addTwo' before initialization
+//addTwo(5)           // referenceerror: Cannot access 'addTwo' before initialization
 const addTwo = function(num){
     return num + 2
 }
