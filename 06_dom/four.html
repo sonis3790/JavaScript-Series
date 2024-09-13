@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit & Remove DOM</title>
+</head>
+<body style="background-color:#212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLangauge(langName) {
+       const li = document.createElement('li');
+       li.innerHTML = `${langName}`;
+       document.querySelector('.language').appendChild(li);
+    }
+    addLangauge("python");
+    addLangauge("typescript");
+
+    function addOptiLanguage(langName) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
+
+    addOptiLanguage("golang");
+
+    // Edit
+
+    const secondLang = document.querySelector('li:nth-child(3)');
+  //  secondLang.innerHTML = 'mojo';
+    const newLi = document.createElement('li');
+    newLi.textContent = 'mojo';
+    secondLang.replaceWith(newLi);
+
+    // edit
+
+    const firstLang = document.querySelector('li:nth-child(1)');
+    firstLang.outerHTML = "<li>Typescript</li>"
+    // const newlist = document.createElement('li');
+    // newlist.textContent = "C++";
+    // firstLang.replaceWith(newlist);
+
+    //remove
+
+    const lastLang = document.querySelector('li:last-child');
+    lastLang.remove();
+</script>
+</html>
